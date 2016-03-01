@@ -8,66 +8,62 @@
 
 #import "ELNAPSNotification.h"
 
-@interface ELNAPSNotification ()
-
-@property (nonatomic, strong) ELNAPSNotificationAlert *alert;
-@property (nonatomic, strong) NSNumber *badge;
-@property (nonatomic, strong) NSString *sound;
-@property (nonatomic, strong) NSNumber *contentAvailable;
-@property (nonatomic, strong) NSDictionary *userInfo;
-
-@end
-
 @implementation ELNAPSNotification
 
 #pragma mark - Initialization
 
-- (instancetype)init {
-    return [self initWithDictionary:@{}];
-}
-
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary {
-    self = [super init];
+    self = [self init];
     if (self) {
-        id aps = dictionary[@"aps"];
+        NSDictionary *aps = dictionary[@"aps"];
         if ([aps isKindOfClass:[NSDictionary class]]) {
             // alert
-            id alert = [(NSDictionary *)aps valueForKey:@"alert"];
+            id alert = [aps valueForKey:@"alert"];
             if ([alert isKindOfClass:[NSDictionary class]]) {
                 self.alert = [[ELNAPSNotificationAlert alloc] initWithDictionary:alert];
             } else if ([alert isKindOfClass:[NSString class]]) {
                 self.alert = [[ELNAPSNotificationAlert alloc] initWithTitle:alert];
             }
             
+            NSNumberFormatter *numberFormatter = [NSNumberFormatter new];
+            
             // badge
-            id badge = [(NSDictionary *)aps valueForKey:@"badge"];
+            id badge = [aps valueForKey:@"badge"];
             if ([badge isKindOfClass:[NSString class]]) {
-                NSNumberFormatter *numberFormatter = [NSNumberFormatter new];
                 badge = [numberFormatter numberFromString:badge];
             }
-            if ([badge isKindOfClass:[NSNumber class]])
+            if ([badge isKindOfClass:[NSNumber class]]) {
                 self.badge = badge;
+            }
             
             // sound
-            id sound = [(NSDictionary *)aps valueForKey:@"sound"];
-            if ([sound isKindOfClass:[NSString class]])
+            id sound = [aps valueForKey:@"sound"];
+            if ([sound isKindOfClass:[NSString class]]) {
                 self.sound = sound;
+            }
             
             // contentAvailable
-            id contentAvailable = [(NSDictionary *)aps valueForKey:@"content-available"];
+            id contentAvailable = [aps valueForKey:@"content-available"];
             if ([contentAvailable isKindOfClass:[NSString class]]) {
-                NSNumberFormatter *numberFormatter = [NSNumberFormatter new];
                 contentAvailable = [numberFormatter numberFromString:badge];
             }
-            if ([contentAvailable isKindOfClass:[NSNumber class]])
+            if ([contentAvailable isKindOfClass:[NSNumber class]]) {
                 self.contentAvailable = contentAvailable;
+            }
+            
+            // category
+            id category = [aps valueForKey:@"category"];
+            if ([category isKindOfClass:[NSString class]]) {
+                self.category = badge;
+            }
         }
         
         // user info
         NSMutableDictionary *userInfo = [dictionary mutableCopy];
         [userInfo removeObjectForKey:@"aps"];
-        if (userInfo.count > 0)
+        if (userInfo.count > 0) {
             self.userInfo = [userInfo copy];
+        }
     }
     return self;
 }
@@ -80,6 +76,7 @@
     copy.badge = self.badge;
     copy.sound = self.sound;
     copy.contentAvailable = self.contentAvailable;
+    copy.category = self.category;
     copy.userInfo = self.userInfo;
     return copy;
 }

@@ -8,19 +8,6 @@
 
 #import "ELNAPSNotificationAlert.h"
 
-@interface ELNAPSNotificationAlert ()
-
-@property (nonatomic, copy) NSString *title;
-@property (nonatomic, copy) NSString *body;
-@property (nonatomic, copy) NSString *titleLocKey;
-@property (nonatomic, copy) NSArray *titleLocArgs;
-@property (nonatomic, copy) NSString *actionLocKey;
-@property (nonatomic, copy) NSString *locKey;
-@property (nonatomic, copy) NSArray *locArgs;
-@property (nonatomic, copy) NSString *launchImage;
-
-@end
-
 @implementation ELNAPSNotificationAlert
 
 #pragma mark - Initialization
