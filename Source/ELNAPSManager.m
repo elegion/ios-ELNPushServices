@@ -54,8 +54,8 @@ static UIUserNotificationType ELNUserNotificationTypeFromRemoteNotificationType(
 
 #pragma mark - Registering and Unregistering
 
-- (void)registerForRemoteNotifications {
-    UIApplication *application = [UIApplication sharedApplication];
+- (void)registerRemoteNotificationsForApplication:(UIApplication *)application {
+    application = application ?: [UIApplication sharedApplication];
     if ([application respondsToSelector:@selector(registerUserNotificationSettings:)]) {
         UIUserNotificationType type = ELNUserNotificationTypeFromRemoteNotificationType(self.type);
         UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:type categories:nil];
@@ -66,22 +66,19 @@ static UIUserNotificationType ELNUserNotificationTypeFromRemoteNotificationType(
     }
 }
 
-- (void)unregisterForRemoteNotifications {
-    [[UIApplication sharedApplication] unregisterForRemoteNotifications];
+- (void)unregisterRemoteNotificationsForApplication:(UIApplication *)application {
+    application = application ?: [UIApplication sharedApplication];
+    [application unregisterForRemoteNotifications];
 }
 
 #pragma mark - Delegate Callbacks
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     [[NSNotificationCenter defaultCenter] postNotificationName:ELNAPSManagerDidReceiveDeviceTokenForRemoteNotifications object:deviceToken];
-    
-    [self.delegate APSManager:self didRegisterForRemoteNotificationsWithDeviceToken:deviceToken];
 }
 
 - (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
     [[NSNotificationCenter defaultCenter] postNotificationName:ELNAPSManagerDidFailToRegisterForRemoteNotifications object:error];
-    
-    [self.delegate APSManager:self didRegisterForRemoteNotificationsWithError:error];
 }
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
@@ -93,13 +90,16 @@ static UIUserNotificationType ELNUserNotificationTypeFromRemoteNotificationType(
     
     [[NSNotificationCenter defaultCenter] postNotificationName:ELNAPSManagerDidReceiveRemoteNotification object:notification];
     
+    UIBackgroundFetchResult result = UIBackgroundFetchResultNoData;
     for (id<ELNAPSNotificationHandler> object in self.notificationHandlers) {
-        if ([(id<ELNAPSNotificationHandler>)object handleNotification:notification forApplication:application])
+        if ([object shouldHandleNotification:notification forApplication:application]) {
+            result = [object handleNotification:notification forApplication:application];
             break;
+        }
     }
 
     if (handler) {
-        handler(UIBackgroundFetchResultNewData);
+        handler(result);
     }
 }
 

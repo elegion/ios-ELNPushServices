@@ -36,6 +36,9 @@ NS_ASSUME_NONNULL_BEGIN
 /// Provide this key with a value of 1 to indicate that new content is available. Including this key and value means that when your app is launched in the background or resumed, application:didReceiveRemoteNotification:fetchCompletionHandler: is called.
 @property (nonatomic, strong, readonly, nullable) NSNumber *contentAvailable;
 
+/// Provide this key with a string value that represents the identifier property of the UIMutableUserNotificationCategory object you created to define custom actions. To learn more about using custom actions, see Registering Your Actionable Notification Types.
+@property (nonatomic, strong, readonly, nullable) NSString *category;
+
 @property (nonatomic, strong, readonly, nullable) NSDictionary *userInfo;
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary NS_DESIGNATED_INITIALIZER;

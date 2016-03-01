@@ -12,6 +12,8 @@
 @protocol ELNAPSNotificationHandler <NSObject>
 
 @required
-- (BOOL)handleNotification:(ELNAPSNotification *)notification forApplication:(UIApplication *)application;
+- (BOOL)shouldHandleNotification:(ELNAPSNotification *)notification forApplication:(UIApplication *)application;
+
+- (UIBackgroundFetchResult)handleNotification:(ELNAPSNotification *)notification forApplication:(UIApplication *)application;
 
 @end

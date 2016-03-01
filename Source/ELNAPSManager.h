@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "ELNAPSNotificationHandler.h"
-#import "ELNAPSManagerDelegate.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -19,18 +18,16 @@ FOUNDATION_EXPORT NSString * const ELNAPSManagerDidReceiveRemoteNotification;
 
 /// Apple Push Services Manager
 ///
-/// By default it is being initialized with [.Alert, .Badge, .Sound] types. Use `initWithType:` method to specify exact remote notification types
+/// By default it is being initialized with [.Alert, .Badge, .Sound] types. Use `initWithType:` method to specify exact remote notification types.
 @interface ELNAPSManager : NSObject
-
-@property (nonatomic, weak) id<ELNAPSManagerDelegate> delegate;
 
 - (instancetype)initWithType:(UIRemoteNotificationType)types NS_DESIGNATED_INITIALIZER;
 
 /// Registers current application for remote notification types. iOS7 compatible.
-- (void)registerForRemoteNotifications;
+- (void)registerRemoteNotificationsForApplication:(UIApplication * _Nullable)application;
 
 /// Unregisters current application from remote notification types.
-- (void)unregisterForRemoteNotifications;
+- (void)unregisterRemoteNotificationsForApplication:(UIApplication * _Nullable)application;
 
 /// Should be called from AppDelegate's `application:didRegisterForRemoteNotificationsWithDeviceToken:` method.
 ///

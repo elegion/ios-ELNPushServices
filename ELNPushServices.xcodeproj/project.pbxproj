@@ -12,13 +12,14 @@
 		111D9EF11C85C48D00CF71B4 /* Default.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 111D9EF01C85C48D00CF71B4 /* Default.xcconfig */; };
 		111D9EFC1C85C4E700CF71B4 /* ELNAPSManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 111D9EF41C85C4E700CF71B4 /* ELNAPSManager.h */; };
 		111D9EFD1C85C4E700CF71B4 /* ELNAPSNotificationHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 111D9EF51C85C4E700CF71B4 /* ELNAPSNotificationHandler.h */; };
-		111D9EFE1C85C4E700CF71B4 /* ELNAPSManagerDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 111D9EF61C85C4E700CF71B4 /* ELNAPSManagerDelegate.h */; };
 		111D9EFF1C85C4E700CF71B4 /* ELNAPSNotification.h in Headers */ = {isa = PBXBuildFile; fileRef = 111D9EF71C85C4E700CF71B4 /* ELNAPSNotification.h */; };
 		111D9F001C85C4E700CF71B4 /* ELNAPSNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 111D9EF81C85C4E700CF71B4 /* ELNAPSNotification.m */; };
 		111D9F011C85C4E700CF71B4 /* ELNAPSNotificationAlert.h in Headers */ = {isa = PBXBuildFile; fileRef = 111D9EF91C85C4E700CF71B4 /* ELNAPSNotificationAlert.h */; };
 		111D9F021C85C4E700CF71B4 /* ELNAPSManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 111D9EFA1C85C4E700CF71B4 /* ELNAPSManager.m */; };
 		111D9F031C85C4E700CF71B4 /* ELNAPSNotificationAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 111D9EFB1C85C4E700CF71B4 /* ELNAPSNotificationAlert.m */; };
-		111D9F071C85CCAE00CF71B4 /* ELNAPSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 111D9F051C85CCAE00CF71B4 /* ELNAPSTests.m */; };
+		111D9F0A1C85D48C00CF71B4 /* NotificationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 111D9F091C85D48C00CF71B4 /* NotificationTests.m */; };
+		111D9F101C85D5E000CF71B4 /* AlertWithStringAsTitle.json in Resources */ = {isa = PBXBuildFile; fileRef = 111D9F0E1C85D5DB00CF71B4 /* AlertWithStringAsTitle.json */; };
+		111D9F171C85D8F100CF71B4 /* AlertWithBadgeAndLocalizedActionKey.json in Resources */ = {isa = PBXBuildFile; fileRef = 111D9F151C85D89900CF71B4 /* AlertWithBadgeAndLocalizedActionKey.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,14 +40,15 @@
 		111D9EF01C85C48D00CF71B4 /* Default.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Default.xcconfig; sourceTree = "<group>"; };
 		111D9EF41C85C4E700CF71B4 /* ELNAPSManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELNAPSManager.h; sourceTree = "<group>"; };
 		111D9EF51C85C4E700CF71B4 /* ELNAPSNotificationHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELNAPSNotificationHandler.h; sourceTree = "<group>"; };
-		111D9EF61C85C4E700CF71B4 /* ELNAPSManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELNAPSManagerDelegate.h; sourceTree = "<group>"; };
 		111D9EF71C85C4E700CF71B4 /* ELNAPSNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELNAPSNotification.h; sourceTree = "<group>"; };
 		111D9EF81C85C4E700CF71B4 /* ELNAPSNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELNAPSNotification.m; sourceTree = "<group>"; };
 		111D9EF91C85C4E700CF71B4 /* ELNAPSNotificationAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELNAPSNotificationAlert.h; sourceTree = "<group>"; };
 		111D9EFA1C85C4E700CF71B4 /* ELNAPSManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELNAPSManager.m; sourceTree = "<group>"; };
 		111D9EFB1C85C4E700CF71B4 /* ELNAPSNotificationAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELNAPSNotificationAlert.m; sourceTree = "<group>"; };
-		111D9F051C85CCAE00CF71B4 /* ELNAPSTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELNAPSTests.m; sourceTree = "<group>"; };
 		111D9F061C85CCAE00CF71B4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		111D9F091C85D48C00CF71B4 /* NotificationTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationTests.m; sourceTree = "<group>"; };
+		111D9F0E1C85D5DB00CF71B4 /* AlertWithStringAsTitle.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AlertWithStringAsTitle.json; sourceTree = "<group>"; };
+		111D9F151C85D89900CF71B4 /* AlertWithBadgeAndLocalizedActionKey.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AlertWithBadgeAndLocalizedActionKey.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,7 +112,6 @@
 			children = (
 				111D9EF41C85C4E700CF71B4 /* ELNAPSManager.h */,
 				111D9EFA1C85C4E700CF71B4 /* ELNAPSManager.m */,
-				111D9EF61C85C4E700CF71B4 /* ELNAPSManagerDelegate.h */,
 				111D9EF71C85C4E700CF71B4 /* ELNAPSNotification.h */,
 				111D9EF81C85C4E700CF71B4 /* ELNAPSNotification.m */,
 				111D9EF91C85C4E700CF71B4 /* ELNAPSNotificationAlert.h */,
@@ -123,10 +124,28 @@
 		111D9F041C85CCAE00CF71B4 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				111D9F051C85CCAE00CF71B4 /* ELNAPSTests.m */,
-				111D9F061C85CCAE00CF71B4 /* Info.plist */,
+				111D9F091C85D48C00CF71B4 /* NotificationTests.m */,
+				111D9F0D1C85D5DB00CF71B4 /* Resources */,
+				111D9F121C85D5EF00CF71B4 /* Supporting Files */,
 			);
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		111D9F0D1C85D5DB00CF71B4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				111D9F0E1C85D5DB00CF71B4 /* AlertWithStringAsTitle.json */,
+				111D9F151C85D89900CF71B4 /* AlertWithBadgeAndLocalizedActionKey.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		111D9F121C85D5EF00CF71B4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				111D9F061C85CCAE00CF71B4 /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,7 +159,6 @@
 				111D9EFC1C85C4E700CF71B4 /* ELNAPSManager.h in Headers */,
 				111D9EFF1C85C4E700CF71B4 /* ELNAPSNotification.h in Headers */,
 				111D9F011C85C4E700CF71B4 /* ELNAPSNotificationAlert.h in Headers */,
-				111D9EFE1C85C4E700CF71B4 /* ELNAPSManagerDelegate.h in Headers */,
 				111D9EFD1C85C4E700CF71B4 /* ELNAPSNotificationHandler.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -233,6 +251,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				111D9F171C85D8F100CF71B4 /* AlertWithBadgeAndLocalizedActionKey.json in Resources */,
+				111D9F101C85D5E000CF71B4 /* AlertWithStringAsTitle.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,7 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				111D9F071C85CCAE00CF71B4 /* ELNAPSTests.m in Sources */,
+				111D9F0A1C85D48C00CF71B4 /* NotificationTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -395,7 +415,7 @@
 		111D9EE71C85C2B100CF71B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = UnitTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.e-legion.ELNPushServices";
 				PRODUCT_NAME = ELNPushServices;
@@ -405,7 +425,7 @@
 		111D9EE81C85C2B100CF71B4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				INFOPLIST_FILE = UnitTests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.e-legion.ELNPushServices";
 				PRODUCT_NAME = ELNPushServices;
