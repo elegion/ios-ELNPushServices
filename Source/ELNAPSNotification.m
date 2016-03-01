@@ -88,9 +88,13 @@
 
 - (NSString *)description {
     NSMutableArray *properties = [NSMutableArray new];
-    for (NSString *selector in @[NSStringFromSelector(@selector(alert)), NSStringFromSelector(@selector(badge)), NSStringFromSelector(@selector(sound)), NSStringFromSelector(@selector(contentAvailable)), NSStringFromSelector(@selector(userInfo))]) {
-        [properties addObject:[NSString stringWithFormat:@"%@ = %@", selector, [self valueForKey:selector]]];
+    for (NSString *selector in @[NSStringFromSelector(@selector(alert)), NSStringFromSelector(@selector(badge)), NSStringFromSelector(@selector(sound)), NSStringFromSelector(@selector(contentAvailable)), NSStringFromSelector(@selector(category)), NSStringFromSelector(@selector(userInfo))]) {
+        id value = [self valueForKey:selector];
+        if (value != nil) {
+            [properties addObject:[NSString stringWithFormat:@"%@ = %@", selector, value]];
+        }
     }
+
     return [NSString stringWithFormat:@"<%@: %p %@>", NSStringFromClass(self.class), self, properties];
 }
 

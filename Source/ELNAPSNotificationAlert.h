@@ -36,20 +36,14 @@ NS_ASSUME_NONNULL_BEGIN
 /// The filename of an image file in the app bundle; it may include the extension or omit it. The image is used as the launch image when users tap the action button or move the action slider. If this property is not specified, the system either uses the previous snapshot,uses the image identified by the UILaunchImageFile key in the app’s Info.plist file, or falls back to Default.png.
 @property (nonatomic, copy, readonly, nullable) NSString *launchImage;
 
-@property (nonatomic, copy, readonly, nullable) NSArray *actions;
-
-- (instancetype)init NS_DESIGNATED_INITIALIZER;
-
 /// Initializes notification alert with title.
-- (instancetype)initWithTitle:(NSString *)title NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithTitle:(NSString *)title;
 
 /// Initializes notification alert using alert payload dictionary.
-- (instancetype)initWithDictionary:(NSDictionary *)dictionary NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 
 /// Returns localized title using `loc-key` and `title-loc-key` payload keys.
 - (NSString *)localizedTitle;
-
-- (NSString *)localizedTitleFromTable:(NSString * _Nullable)tbl;
 
 @end
 

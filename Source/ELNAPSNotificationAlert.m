@@ -18,7 +18,6 @@
 @property (nonatomic, copy) NSString *locKey;
 @property (nonatomic, copy) NSArray *locArgs;
 @property (nonatomic, copy) NSString *launchImage;
-@property (nonatomic, copy) NSArray *actions;
 
 @end
 
@@ -26,16 +25,8 @@
 
 #pragma mark - Initialization
 
-- (instancetype)init {
-    self = [super init];
-    if (self) {
-        // do nothing
-    }
-    return self;
-}
-
 - (instancetype)initWithTitle:(NSString *)title {
-    self = [super init];
+    self = [self init];
     if (self) {
         self.title = title;
     }
@@ -43,7 +34,7 @@
 }
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary {
-    self = [super init];
+    self = [self init];
     if (self) {
         // title
         id title = [dictionary valueForKey:@"title"];
@@ -92,12 +83,6 @@
         if ([launchImage isKindOfClass:[NSString class]]) {
             self.launchImage = launchImage;
         }
-
-        // actions
-        id actions = [dictionary valueForKey:@"actions"];
-        if ([actions isKindOfClass:[NSArray class]]) {
-            self.actions = actions;
-        }
     }
     return self;
 }
@@ -114,17 +99,12 @@
     copy.locKey = self.locKey;
     copy.locArgs = self.locArgs;
     copy.launchImage = self.launchImage;
-    copy.actions = self.actions;
     return copy;
 }
 
 #pragma mark - Localized Title
 
 - (NSString *)localizedTitle {
-    return [self localizedTitleFromTable:nil];
-}
-
-- (NSString *)localizedTitleFromTable:(NSString *)tbl {
     NSString *key = self.locKey;
     NSArray *args = self.locArgs ?: @[];
     if (key == nil) {
@@ -132,7 +112,7 @@
         args = self.titleLocArgs ?: @[];
     }
     
-    id format = NSLocalizedStringFromTable(key, tbl, nil);
+    id format = NSLocalizedString(key, nil);
     void *argList = malloc(sizeof(NSString *) * args.count);
     [args getObjects:(__unsafe_unretained id *)argList];
     
@@ -146,8 +126,11 @@
 
 - (NSString *)description {
     NSMutableArray *properties = [NSMutableArray new];
-    for (NSString *selector in @[NSStringFromSelector(@selector(title)), NSStringFromSelector(@selector(body)), NSStringFromSelector(@selector(titleLocKey)), NSStringFromSelector(@selector(titleLocArgs)), NSStringFromSelector(@selector(actionLocKey)), NSStringFromSelector(@selector(locKey)), NSStringFromSelector(@selector(locArgs)), NSStringFromSelector(@selector(launchImage)), NSStringFromSelector(@selector(actions))]) {
-        [properties addObject:[NSString stringWithFormat:@"%@ = %@", selector, [self valueForKey:selector]]];
+    for (NSString *selector in @[NSStringFromSelector(@selector(title)), NSStringFromSelector(@selector(body)), NSStringFromSelector(@selector(titleLocKey)), NSStringFromSelector(@selector(titleLocArgs)), NSStringFromSelector(@selector(actionLocKey)), NSStringFromSelector(@selector(locKey)), NSStringFromSelector(@selector(locArgs)), NSStringFromSelector(@selector(launchImage))]) {
+        id value = [self valueForKey:selector];
+        if (value != nil) {
+            [properties addObject:[NSString stringWithFormat:@"%@ = %@", selector, value]];
+        }
     }
 
     return [NSString stringWithFormat:@"<%@: %p %@>", NSStringFromClass(self.class), self, properties];
