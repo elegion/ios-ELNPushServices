@@ -9,21 +9,20 @@
 #import "ELNAPSManager.h"
 #import "ELNAPSNotificationHandler.h"
 
-NSString * const ELNAPSManagerDidReceiveDeviceTokenForRemoteNotifications = @"ELNAPSManagerDidReceiveDeviceTokenForRemoteNotifications";
-NSString * const ELNAPSManagerDidFailToRegisterForRemoteNotifications = @"ELNAPSManagerDidFailToRegisterForRemoteNotifications";
-NSString * const ELNAPSManagerDidReceiveRemoteNotification = @"ELNAPSManagerDidReceiveRemoteNotification";
-
 static UIUserNotificationType ELNUserNotificationTypeFromRemoteNotificationType(UIRemoteNotificationType type) {
     if (type == UIRemoteNotificationTypeNone)
         return UIUserNotificationTypeNone;
     
     UIUserNotificationType result = UIUserNotificationTypeNone;
-    if (type & UIRemoteNotificationTypeBadge)
+    if ((type & UIRemoteNotificationTypeBadge) == UIRemoteNotificationTypeBadge) {
         result |= UIUserNotificationTypeBadge;
-    if (type & UIRemoteNotificationTypeSound)
+    }
+    if ((type & UIRemoteNotificationTypeSound) == UIRemoteNotificationTypeSound) {
         result |= UIUserNotificationTypeSound;
-    if (type & UIRemoteNotificationTypeAlert)
+    }
+    if ((type & UIRemoteNotificationTypeAlert) == UIRemoteNotificationTypeAlert) {
         result |= UIUserNotificationTypeAlert;
+    }
     
     return result;
 }
@@ -73,22 +72,12 @@ static UIUserNotificationType ELNUserNotificationTypeFromRemoteNotificationType(
 
 #pragma mark - Delegate Callbacks
 
-- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
-    [[NSNotificationCenter defaultCenter] postNotificationName:ELNAPSManagerDidReceiveDeviceTokenForRemoteNotifications object:deviceToken];
-}
-
-- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
-    [[NSNotificationCenter defaultCenter] postNotificationName:ELNAPSManagerDidFailToRegisterForRemoteNotifications object:error];
-}
-
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
     [self application:application didReceiveRemoteNotification:userInfo fetchCompletionHandler:nil];
 }
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))handler {
     ELNAPSNotification *notification = [[ELNAPSNotification alloc] initWithDictionary:userInfo];
-    
-    [[NSNotificationCenter defaultCenter] postNotificationName:ELNAPSManagerDidReceiveRemoteNotification object:notification];
     
     UIBackgroundFetchResult result = UIBackgroundFetchResultNoData;
     for (id<ELNAPSNotificationHandler> object in self.notificationHandlers) {
@@ -109,8 +98,8 @@ static UIUserNotificationType ELNUserNotificationTypeFromRemoteNotificationType(
     [self.notificationHandlers addObject:handler];
 }
 
-- (void)unregisterAllNotificationHandlers {
-    [self.notificationHandlers removeAllObjects];
+- (void)unregisterNotificationHandler:(id<ELNAPSNotificationHandler>)handler {
+    [self.notificationHandlers removeObject:handler];
 }
 
 @end

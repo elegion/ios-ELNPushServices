@@ -11,11 +11,6 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-/// Notification may be triggered any time the device token changes, not just in response to your app registering or re-registering
-FOUNDATION_EXPORT NSString * const ELNAPSManagerDidReceiveDeviceTokenForRemoteNotifications;
-FOUNDATION_EXPORT NSString * const ELNAPSManagerDidFailToRegisterForRemoteNotifications;
-FOUNDATION_EXPORT NSString * const ELNAPSManagerDidReceiveRemoteNotification;
-
 /// Apple Push Services Manager
 ///
 /// By default it is being initialized with [.Alert, .Badge, .Sound] types. Use `initWithType:` method to specify exact remote notification types.
@@ -29,16 +24,6 @@ FOUNDATION_EXPORT NSString * const ELNAPSManagerDidReceiveRemoteNotification;
 /// Unregisters current application from remote notification types.
 - (void)unregisterRemoteNotificationsForApplication:(UIApplication * _Nullable)application;
 
-/// Should be called from AppDelegate's `application:didRegisterForRemoteNotificationsWithDeviceToken:` method.
-///
-/// Throws `ELNAPSManagerDidReceiveDeviceTokenForRemoteNotifications` notification.
-- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken;
-
-/// Should be called from AppDelegate's `application:didFailToRegisterForRemoteNotificationsWithError:` method.
-///
-/// Throws `ELNAPSManagerDidFailToRegisterForRemoteNotifications` notification.
-- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error;
-
 /// Should be called from AppDelegate's `application:didReceiveRemoteNotification:` method.
 ///
 /// Throws `ELNAPSManagerDidReceiveRemoteNotification` notification.
@@ -50,7 +35,8 @@ FOUNDATION_EXPORT NSString * const ELNAPSManagerDidReceiveRemoteNotification;
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^ _Nullable)(UIBackgroundFetchResult result))handler;
 
 - (void)registerNotificationHandler:(id<ELNAPSNotificationHandler>)handler;
-- (void)unregisterAllNotificationHandlers;
+
+- (void)unregisterNotificationHandler:(id<ELNAPSNotificationHandler>)handler;
 
 @end
 
