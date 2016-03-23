@@ -16,7 +16,11 @@ NS_ASSUME_NONNULL_BEGIN
 /// By default it is being initialized with [.Alert, .Badge, .Sound] types. Use `initWithType:` method to specify exact remote notification types.
 @interface ELNAPSManager : NSObject
 
+#if __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_8_0
+- (instancetype)initWithType:(UIUserNotificationType)types NS_DESIGNATED_INITIALIZER;
+#else
 - (instancetype)initWithType:(UIRemoteNotificationType)types NS_DESIGNATED_INITIALIZER;
+#endif
 
 /// Registers current application for remote notification types. iOS7 compatible.
 - (void)registerRemoteNotificationsForApplication:(UIApplication * _Nullable)application;

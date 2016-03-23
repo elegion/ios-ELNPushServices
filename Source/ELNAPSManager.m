@@ -9,6 +9,7 @@
 #import "ELNAPSManager.h"
 #import "ELNAPSNotificationHandler.h"
 
+#if __IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_8_0
 static UIUserNotificationType ELNUserNotificationTypeFromRemoteNotificationType(UIRemoteNotificationType type) {
     if (type == UIRemoteNotificationTypeNone)
         return UIUserNotificationTypeNone;
@@ -26,10 +27,16 @@ static UIUserNotificationType ELNUserNotificationTypeFromRemoteNotificationType(
     
     return result;
 }
+#endif
 
 @interface ELNAPSManager ()
 
+#if __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_8_0
+@property (nonatomic, assign) UIUserNotificationType type;
+#else
 @property (nonatomic, assign) UIRemoteNotificationType type;
+#endif
+
 @property (nonatomic, strong) NSMutableArray<id<ELNAPSNotificationHandler>> *notificationHandlers;
 
 @end
@@ -37,6 +44,23 @@ static UIUserNotificationType ELNUserNotificationTypeFromRemoteNotificationType(
 @implementation ELNAPSManager
 
 #pragma mark - Initialization
+
+#if __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_8_0
+
+- (instancetype)init {
+    return [self initWithType:(UIUserNotificationType)(UIUserNotificationTypeAlert | UIUserNotificationTypeBadge | UIUserNotificationTypeSound)];
+}
+
+- (instancetype)initWithType:(UIUserNotificationType)type {
+    self = [super init];
+    if (self) {
+        self.notificationHandlers = [NSMutableArray new];
+        self.type = type;
+    }
+    return self;
+}
+
+#else
 
 - (instancetype)init {
     return [self initWithType:(UIRemoteNotificationType)(UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound)];
@@ -51,17 +75,25 @@ static UIUserNotificationType ELNUserNotificationTypeFromRemoteNotificationType(
     return self;
 }
 
+#endif
+
 #pragma mark - Registering and Unregistering
 
 - (void)registerRemoteNotificationsForApplication:(UIApplication *)application {
     application = application ?: [UIApplication sharedApplication];
     if ([application respondsToSelector:@selector(registerUserNotificationSettings:)]) {
+#if __IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_8_0
         UIUserNotificationType type = ELNUserNotificationTypeFromRemoteNotificationType(self.type);
+#else 
+        UIUserNotificationType type = self.type;
+#endif
         UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:type categories:nil];
         [application registerUserNotificationSettings:settings];
         [application registerForRemoteNotifications];
     } else {
+#if __IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_8_0
         [application registerForRemoteNotificationTypes:self.type];
+#endif
     }
 }
 
