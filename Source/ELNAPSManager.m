@@ -27,6 +27,29 @@ static UIUserNotificationType ELNUserNotificationTypeFromRemoteNotificationType(
     return result;
 }
 
+#if __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_8_0
+
+static UIRemoteNotificationType ELNRemoteNotificationTypeFromUserNotificationType(UIUserNotificationType type) {
+    if (type == UIUserNotificationTypeNone) {
+        return UIRemoteNotificationTypeNone;
+    }
+    
+    UIRemoteNotificationType result = UIRemoteNotificationTypeNone;
+    if ((type & UIUserNotificationTypeBadge) == UIUserNotificationTypeBadge) {
+        result |= UIRemoteNotificationTypeBadge;
+    }
+    if ((type & UIUserNotificationTypeSound) == UIUserNotificationTypeSound) {
+        result |= UIRemoteNotificationTypeSound;
+    }
+    if ((type & UIUserNotificationTypeAlert) == UIUserNotificationTypeAlert) {
+        result |= UIRemoteNotificationTypeAlert;
+    }
+    
+    return result;
+}
+
+#endif
+
 @interface ELNAPSManager ()
 
 @property (nonatomic, assign) UIRemoteNotificationType type;
@@ -42,6 +65,19 @@ static UIUserNotificationType ELNUserNotificationTypeFromRemoteNotificationType(
     return [self initWithType:(UIRemoteNotificationType)(UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound)];
 }
 
+#if __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_8_0
+
+- (instancetype)initWithType:(UIUserNotificationType)type {
+    self = [super init];
+    if (self) {
+        self.notificationHandlers = [NSMutableArray new];
+        self.type = ELNRemoteNotificationTypeFromUserNotificationType(type);
+    }
+    return self;
+}
+
+#else
+
 - (instancetype)initWithType:(UIRemoteNotificationType)type {
     self = [super init];
     if (self) {
@@ -50,6 +86,8 @@ static UIUserNotificationType ELNUserNotificationTypeFromRemoteNotificationType(
     }
     return self;
 }
+
+#endif
 
 #pragma mark - Registering and Unregistering
 
