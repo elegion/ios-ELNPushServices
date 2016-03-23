@@ -82,6 +82,8 @@ static UIUserNotificationType ELNUserNotificationTypeFromRemoteNotificationType(
 - (void)registerRemoteNotificationsForApplication:(UIApplication *)application {
     application = application ?: [UIApplication sharedApplication];
     if ([application respondsToSelector:@selector(registerUserNotificationSettings:)]) {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wpartial-availability"
 #if __IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_8_0
         UIUserNotificationType type = ELNUserNotificationTypeFromRemoteNotificationType(self.type);
 #else 
@@ -90,6 +92,7 @@ static UIUserNotificationType ELNUserNotificationTypeFromRemoteNotificationType(
         UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:type categories:nil];
         [application registerUserNotificationSettings:settings];
         [application registerForRemoteNotifications];
+#pragma clang diagnostic pop
     } else {
 #if __IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_8_0
         [application registerForRemoteNotificationTypes:self.type];

@@ -77,7 +77,7 @@
 #pragma mark - NSCopying
 
 - (nonnull id)copyWithZone:(nullable NSZone *)zone {
-    typeof(self) copy = [self.class new];
+    __typeof__(self) copy = [self.class new];
     copy.title = self.title;
     copy.body = self.body;
     copy.titleLocKey = self.titleLocKey;
@@ -103,7 +103,10 @@
     void *argList = malloc(sizeof(NSString *) * args.count);
     [args getObjects:(__unsafe_unretained id *)argList];
     
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wformat-nonliteral"
     NSString *title = [[NSString alloc] initWithFormat:format arguments:argList];
+#pragma clang diagnostic pop
     free(argList);
     
     return title;
@@ -120,7 +123,7 @@
         }
     }
 
-    return [NSString stringWithFormat:@"<%@: %p %@>", NSStringFromClass(self.class), self, properties];
+    return [NSString stringWithFormat:@"<%@: %p %@>", NSStringFromClass(self.class), (void *)self, properties];
 }
 
 @end

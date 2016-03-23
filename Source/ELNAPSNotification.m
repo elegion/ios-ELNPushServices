@@ -71,7 +71,7 @@
 #pragma mark - NSCopying
 
 - (nonnull id)copyWithZone:(nullable NSZone *)zone {
-    typeof(self) copy = [self.class new];
+    __typeof__(self) copy = [self.class new];
     copy.alert = self.alert;
     copy.badge = self.badge;
     copy.sound = self.sound;
@@ -92,7 +92,7 @@
         }
     }
 
-    return [NSString stringWithFormat:@"<%@: %p %@>", NSStringFromClass(self.class), self, properties];
+    return [NSString stringWithFormat:@"<%@: %p %@>", NSStringFromClass(self.class), (void *)self, properties];
 }
 
 @end

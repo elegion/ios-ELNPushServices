@@ -21,4 +21,4 @@ GCC_WARN_ABOUT_MISSING_NEWLINE = YES
 GCC_WARN_SHADOW = YES
 GCC_WARN_SIGN_COMPARE = YES
 GCC_TREAT_WARNINGS_AS_ERRORS = YES
-WARNING_CFLAGS = -Wall
+WARNING_CFLAGS = -Weverything -Wno-objc-missing-property-synthesis -Wno-gnu -Wno-float-equal -Wno-nullable-to-nonnull-conversion -Wno-auto-import -Wno-direct-ivar-access -Wno-missing-variable-declarations
