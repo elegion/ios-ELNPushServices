@@ -9,9 +9,6 @@
 #ifndef Tests_Bridging_Header_h
 #define Tests_Bridging_Header_h
 
-#import "ELNAPSManager.h"
-#import "ELNAPSNotification.h"
-#import "ELNAPSNotificationHandler.h"
-#import "ELNAPSEventsHandlerChain.h"
+#import "ELNPushServices.h"
 
 #endif /* Tests_Bridging_Header_h */
