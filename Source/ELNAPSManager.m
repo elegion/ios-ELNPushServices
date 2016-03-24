@@ -37,8 +37,6 @@ static UIUserNotificationType ELNUserNotificationTypeFromRemoteNotificationType(
 @property (nonatomic, assign) UIRemoteNotificationType type;
 #endif
 
-@property (nonatomic, strong) NSMutableArray<id<ELNAPSNotificationHandler>> *notificationHandlers;
-
 @end
 
 @implementation ELNAPSManager
@@ -54,7 +52,6 @@ static UIUserNotificationType ELNUserNotificationTypeFromRemoteNotificationType(
 - (instancetype)initWithType:(UIUserNotificationType)type {
     self = [super init];
     if (self) {
-        self.notificationHandlers = [NSMutableArray new];
         self.type = type;
     }
     return self;
@@ -69,7 +66,6 @@ static UIUserNotificationType ELNUserNotificationTypeFromRemoteNotificationType(
 - (instancetype)initWithType:(UIRemoteNotificationType)type {
     self = [super init];
     if (self) {
-        self.notificationHandlers = [NSMutableArray new];
         self.type = type;
     }
     return self;
@@ -103,38 +99,6 @@ static UIUserNotificationType ELNUserNotificationTypeFromRemoteNotificationType(
 - (void)unregisterForRemoteNotificationsWithApplication:(UIApplication *)application {
     application = application ?: [UIApplication sharedApplication];
     [application unregisterForRemoteNotifications];
-}
-
-#pragma mark - Delegate Callbacks
-
-- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
-    [self application:application didReceiveRemoteNotification:userInfo fetchCompletionHandler:nil];
-}
-
-- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))handler {
-    ELNAPSNotification *notification = [[ELNAPSNotification alloc] initWithDictionary:userInfo];
-    
-    UIBackgroundFetchResult result = UIBackgroundFetchResultNoData;
-    for (id<ELNAPSNotificationHandler> object in self.notificationHandlers) {
-        if ([object shouldHandleNotification:notification forApplication:application]) {
-            result = [object handleNotification:notification forApplication:application];
-            break;
-        }
-    }
-
-    if (handler) {
-        handler(result);
-    }
-}
-
-#pragma mark - Notification Handlers
-
-- (void)registerNotificationHandler:(id<ELNAPSNotificationHandler>)handler {
-    [self.notificationHandlers addObject:handler];
-}
-
-- (void)unregisterNotificationHandler:(id<ELNAPSNotificationHandler>)handler {
-    [self.notificationHandlers removeObject:handler];
 }
 
 @end
