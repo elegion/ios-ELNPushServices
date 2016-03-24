@@ -29,29 +29,34 @@ github 'elegion/ios-ELNPushServices'
 
 ```objective-c
 ELNAPSManager *manager = [ELNAPSManager new];
+manager.eventsHandler = [ELNAPSEventsHandlerChain new];
 
 // register for remote notifications in iOS7 compatible way
-[manager registerRemoteNotificationsForApplication:nil];
+[manager registerForRemoteNotificationsWithApplication:nil];
 
 // unregister from remote notifications
-[manager unregisterRemoteNotificationsForApplication:nil];
+[manager unregisterForRemoteNotificationsWithApplication:nil];
 ```
 
 ### Handle Remote Notifications
 
-Необходимо проксировать вызовы UIAppDelegate в менеджер:
+Обработкой событий занимается объект, который реализует протокол `ELNAPSEventsHandler`.
+
+Библиотека предоставляет стандартный объект `ELNAPSEventsHandlerChain`, который позволяет зарегистрировать цепочку обработчиков.
+
+Необходимо проксировать вызовы UIAppDelegate в обработчик событий:
 
 ```objective-c
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
-	[self.manager application:application didReceiveRemoteNotification:userInfo];
+	[self.eventsHandler.manager application:application didReceiveRemoteNotification:userInfo];
 }
 ```
 
-После получения уведомления менеджер `ELNAPSManager` пытается обработать его. Для этого он ищет обработчик, который должен быть зарегистрирован ранее:
+После получения уведомления  `ELNAPSEventsHandlerChain` пытается обработать его. Для этого он ищет обработчик, который должен быть зарегистрирован ранее:
 
 ```objective-c
 id<ELNAPSNotificationHandler> handler = [MyCustomNotificationHandler new];
-[manager registerNotificationHandler:handler];
+[eventsHandler addNotificationHandler:handler];
 ```
 
 ### Handlers
