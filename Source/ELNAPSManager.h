@@ -23,10 +23,10 @@ NS_ASSUME_NONNULL_BEGIN
 #endif
 
 /// Registers current application for remote notification types. iOS7 compatible.
-- (void)registerRemoteNotificationsForApplication:(UIApplication * _Nullable)application;
+- (void)registerForRemoteNotificationsWithApplication:(UIApplication * _Nullable)application;
 
 /// Unregisters current application from remote notification types.
-- (void)unregisterRemoteNotificationsForApplication:(UIApplication * _Nullable)application;
+- (void)unregisterForRemoteNotificationsWithApplication:(UIApplication * _Nullable)application;
 
 /// Should be called from AppDelegate's `application:didReceiveRemoteNotification:` method.
 ///

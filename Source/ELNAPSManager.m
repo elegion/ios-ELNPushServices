@@ -79,7 +79,7 @@ static UIUserNotificationType ELNUserNotificationTypeFromRemoteNotificationType(
 
 #pragma mark - Registering and Unregistering
 
-- (void)registerRemoteNotificationsForApplication:(UIApplication *)application {
+- (void)registerForRemoteNotificationsWithApplication:(UIApplication *)application {
     application = application ?: [UIApplication sharedApplication];
     if ([application respondsToSelector:@selector(registerUserNotificationSettings:)]) {
 #pragma clang diagnostic push
@@ -100,7 +100,7 @@ static UIUserNotificationType ELNUserNotificationTypeFromRemoteNotificationType(
     }
 }
 
-- (void)unregisterRemoteNotificationsForApplication:(UIApplication *)application {
+- (void)unregisterForRemoteNotificationsWithApplication:(UIApplication *)application {
     application = application ?: [UIApplication sharedApplication];
     [application unregisterForRemoteNotifications];
 }
