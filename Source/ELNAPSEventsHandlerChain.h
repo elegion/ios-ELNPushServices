@@ -10,6 +10,8 @@
 #import "ELNAPSEventsHandler.h"
 #import "ELNAPSNotificationHandler.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface ELNAPSEventsHandlerChain : NSObject <ELNAPSEventsHandler>
 
 - (void)addNotificationHandler:(id<ELNAPSNotificationHandler>)handler;
@@ -17,3 +19,5 @@
 - (void)removeNotificationHandler:(id<ELNAPSNotificationHandler>)handler;
 
 @end
+
+NS_ASSUME_NONNULL_END

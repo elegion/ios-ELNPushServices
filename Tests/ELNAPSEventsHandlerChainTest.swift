@@ -12,11 +12,11 @@ class TestHandler : NSObject, ELNAPSNotificationHandler {
     
     var handled = false
     
-    @objc func shouldHandleNotification(notification: ELNAPSNotification!, forApplication application: UIApplication!) -> Bool {
+    @objc func shouldHandleNotification(notification: ELNAPSNotification, forApplication application: UIApplication) -> Bool {
         return true
     }
     
-    @objc func handleNotification(notification: ELNAPSNotification!, forApplication application: UIApplication!) -> UIBackgroundFetchResult {
+    @objc func handleNotification(notification: ELNAPSNotification, forApplication application: UIApplication) -> UIBackgroundFetchResult {
         handled = true
         return .NoData
     }

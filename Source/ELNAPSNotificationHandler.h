@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "ELNAPSNotification.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @protocol ELNAPSNotificationHandler <NSObject>
 
 @required
@@ -17,3 +19,5 @@
 - (UIBackgroundFetchResult)handleNotification:(ELNAPSNotification *)notification forApplication:(UIApplication *)application;
 
 @end
+
+NS_ASSUME_NONNULL_END
