@@ -1,6 +1,6 @@
 # ELNPushServices
 
-Упрощает работу с [APS](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html)
+Упрощает работу с [Apple Push Services](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html)
 
 - iOS7-совместимая подписка на пуши
 - отписка от пушей
@@ -75,11 +75,11 @@ id<ELNAPSNotificationHandler> handler = [MyCustomNotificationHandler new];
 
 Первый обработчик, который возвращает `YES` в методе `shouldHandleNotification:forApplication:` , получает возможность обработать уведомления, после чего поиск обработчика завершается.
 
-Обработчик получает возможность выполнить любое действие при получении уведомления в методе `handleNotification:forApplication:`:
+Для обработки уведомления используется метод `handleNotification:forApplication:`:
 
 ```objective-c
 - (UIBackgroundFetchResult)handleNotification:(ELNAPSNotification *)notification forApplication:(UIApplication *)application {
-	NSLog(@"Received push notification with title %@", notifcation.alert.title);
+	NSLog(@"Received push notification with title %@", notification.alert.title);
 	return UIBackgroundFetchResultNoData;
 }
 ```
