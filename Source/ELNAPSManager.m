@@ -8,6 +8,7 @@
 
 #import "ELNAPSManager.h"
 #import "ELNAPSNotificationHandler.h"
+#import "ELNAPSEventsHandlerChain.h"
 
 #if __IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_8_0
 static UIUserNotificationType ELNUserNotificationTypeFromRemoteNotificationType(UIRemoteNotificationType type) {
@@ -53,6 +54,7 @@ static UIUserNotificationType ELNUserNotificationTypeFromRemoteNotificationType(
     self = [super init];
     if (self) {
         self.type = type;
+        self.eventsHandler = [ELNAPSEventsHandlerChain new];
     }
     return self;
 }
@@ -67,6 +69,7 @@ static UIUserNotificationType ELNUserNotificationTypeFromRemoteNotificationType(
     self = [super init];
     if (self) {
         self.type = type;
+        self.eventsHandler = [ELNAPSEventsHandlerChain new];
     }
     return self;
 }

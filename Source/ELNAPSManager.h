@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 /// By default it is being initialized with [.Alert, .Badge, .Sound] types. Use `initWithType:` method to specify exact remote notification types.
 @interface ELNAPSManager : NSObject
 
-/// Default value is nil.
+/// Default value is an instance of `ELNAPSEventsHandlerChain`.
 @property (nonatomic, strong) id<ELNAPSEventsHandler> eventsHandler;
 
 #if __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_8_0

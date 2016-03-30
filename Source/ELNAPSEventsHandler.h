@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ELNAPSNotificationHandler.h"
 
 @protocol ELNAPSEventsHandler <NSObject>
 
@@ -19,5 +20,9 @@
 
 /// Should be called from AppDelegate's `application:didReceiveRemoteNotification:fetchCompletionHandler:` method.
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult result))completionHandler;
+
+- (void)addNotificationHandler:(id<ELNAPSNotificationHandler>)handler;
+
+- (void)removeNotificationHandler:(id<ELNAPSNotificationHandler>)handler;
 
 @end
