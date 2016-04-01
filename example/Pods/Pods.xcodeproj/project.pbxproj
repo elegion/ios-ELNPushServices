@@ -7,23 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1EEB9EA6B6035EFF48C61AD1FD42FDA4 /* ELNAPSEventsHandlerChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D7FD33A1498913AA72D6155047EAC75 /* ELNAPSEventsHandlerChain.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		263C4E9176C0560CF532C574B71F700F /* ELNPushServices-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E342CF52E3D8A73D013248C8A32BC74 /* ELNPushServices-dummy.m */; };
-		26595058C6EB7B34F8990CF02A2D51E7 /* ELNAPSNotificationHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C79FBD83895D17A97D4490165E10A38 /* ELNAPSNotificationHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3137CBE87E53334DB55850D9F60E4952 /* ELNAPSNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 662DE38B1A4CDEA77A7A3AD60FA3E83B /* ELNAPSNotification.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		32F7A583DA46650BF752A6BF638A7807 /* ELNAPSManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B0989A85E74E363E2EA215C80D257DA /* ELNAPSManager.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		26595058C6EB7B34F8990CF02A2D51E7 /* ELNAPSNotificationHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F2FA76486F2A782E0279BC16E70C118 /* ELNAPSNotificationHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3751BC7351BF61AEDC4C39B59AC926DE /* Pods-example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 024A43CAEA71C382F2FF54526557D8E7 /* Pods-example-dummy.m */; };
-		4292049DD1C4C18D87BAC15D99B10D7B /* ELNAPSManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 487618545495DDE51A8383C7234DD1E6 /* ELNAPSManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5439948FE71A2966B78BD2BAFD396E50 /* ELNAPSNotificationAlert.h in Headers */ = {isa = PBXBuildFile; fileRef = 428E0FF23D4118B22311094237B49615 /* ELNAPSNotificationAlert.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4292049DD1C4C18D87BAC15D99B10D7B /* ELNAPSManager.h in Headers */ = {isa = PBXBuildFile; fileRef = DD19B676A3DE739104C43DEA54D40EFD /* ELNAPSManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5439948FE71A2966B78BD2BAFD396E50 /* ELNAPSNotificationAlert.h in Headers */ = {isa = PBXBuildFile; fileRef = C61A24A4BF78FD8F83EFB910F0AD5AF8 /* ELNAPSNotificationAlert.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5F572A6A98F6EBDDE2BD28BCC8495C5E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		6B3E638710853080AFE05B5975031B04 /* ELNAPSEventsHandlerChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DA2F19B2D3DD5D0FB1FD931793CD6B8 /* ELNAPSEventsHandlerChain.m */; };
+		6B45ED01B5FF56A991B0010B576D4E96 /* ELNAPSNotificationAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D115726115C2F28E0E6C9D42FFE9FB3 /* ELNAPSNotificationAlert.m */; };
 		7162CB4EEB29B0B49805801A7BAE3B05 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		819C7EE29327BD1375B7521712ED2EF6 /* ELNAPSEventsHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 0030E395A7267C4235728BA466701645 /* ELNAPSEventsHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		819C7EE29327BD1375B7521712ED2EF6 /* ELNAPSEventsHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 9EAB0E065AC0ED5F1D681783C7E037A1 /* ELNAPSEventsHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A46792600FEFA312F6902E72DE55DC75 /* ELNPushServices-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EC937F7421F768A279C00200AE8BD1B /* ELNPushServices-dummy.m */; };
+		A64E6D48857BDCD5E0299B61BE1BB425 /* ELNAPSManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 47504C6A1D46D476FA903AACAC1B04D6 /* ELNAPSManager.m */; };
 		A8D977F68E5111DE1E1890DDA1F57C75 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		C44EC9961CE09A98B67DEAF5EAF571D0 /* ELNAPSNotificationAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CA9F3978A3735054BF95F9361D0EA30 /* ELNAPSNotificationAlert.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		D3239F6A225F192B2E327EC89AE90259 /* ELNPushServices.h in Headers */ = {isa = PBXBuildFile; fileRef = DFA7A6EA7420A09AD865A1C5D2CA34B5 /* ELNPushServices.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D3239F6A225F192B2E327EC89AE90259 /* ELNPushServices.h in Headers */ = {isa = PBXBuildFile; fileRef = 9270D32D888923A2B402800D03FA8F12 /* ELNPushServices.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DD20C2CFDF7E6C10168C05AE0351D728 /* Pods-exampleTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C10F1ABD409D3ABCBC942CD6CBCFD2F /* Pods-exampleTests-dummy.m */; };
-		E8003CAC5966E0D7C3B687E7FF1B4FF4 /* ELNAPSEventsHandlerChain.h in Headers */ = {isa = PBXBuildFile; fileRef = E1CD42FF3BCE61DF95EB3EDED5F183D0 /* ELNAPSEventsHandlerChain.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FB3AF4E05F93465E60B966DEAE38077D /* ELNAPSNotification.h in Headers */ = {isa = PBXBuildFile; fileRef = C26AF6421C562967B968B46A4BB224AA /* ELNAPSNotification.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E8003CAC5966E0D7C3B687E7FF1B4FF4 /* ELNAPSEventsHandlerChain.h in Headers */ = {isa = PBXBuildFile; fileRef = 49E62D77136E38AA7C067224D2935855 /* ELNAPSEventsHandlerChain.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ECDF548D1564E2F556C0C7F067CACB02 /* ELNAPSNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 638605D07DDE7EAB2DEE37D465493F3F /* ELNAPSNotification.m */; };
+		FB3AF4E05F93465E60B966DEAE38077D /* ELNAPSNotification.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DC1200C030557E1A41340342218D21C /* ELNAPSNotification.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,39 +44,39 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0030E395A7267C4235728BA466701645 /* ELNAPSEventsHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ELNAPSEventsHandler.h; sourceTree = "<group>"; };
 		024A43CAEA71C382F2FF54526557D8E7 /* Pods-example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-example-dummy.m"; sourceTree = "<group>"; };
-		0B0989A85E74E363E2EA215C80D257DA /* ELNAPSManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ELNAPSManager.m; sourceTree = "<group>"; };
-		0D7FD33A1498913AA72D6155047EAC75 /* ELNAPSEventsHandlerChain.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ELNAPSEventsHandlerChain.m; sourceTree = "<group>"; };
 		0F0FAA2BCB2A902812FE6755FF9DCCC0 /* libPods-example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		10E3D02B1A0CE04F94E54CEBA74DF4B5 /* libPods-exampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-exampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		17992FA5F05A414C720E14E63CD6640F /* Pods-example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-example.debug.xcconfig"; sourceTree = "<group>"; };
-		1809DE3DC519B8DD6E51BFBACEA5EF6E /* ELNPushServices.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ELNPushServices.xcconfig; sourceTree = "<group>"; };
 		1A972FD0E04C3A95A1D90438B329E7D8 /* Pods-exampleTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-exampleTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		1D115726115C2F28E0E6C9D42FFE9FB3 /* ELNAPSNotificationAlert.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ELNAPSNotificationAlert.m; sourceTree = "<group>"; };
+		21C361F20C47D7A95B9CD69B01C73444 /* ELNPushServices.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ELNPushServices.xcconfig; sourceTree = "<group>"; };
 		33CFAED7DB44BFD3ACA04E2948B284D3 /* Pods-example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-example.release.xcconfig"; sourceTree = "<group>"; };
 		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		428E0FF23D4118B22311094237B49615 /* ELNAPSNotificationAlert.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ELNAPSNotificationAlert.h; sourceTree = "<group>"; };
-		487618545495DDE51A8383C7234DD1E6 /* ELNAPSManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ELNAPSManager.h; sourceTree = "<group>"; };
+		47504C6A1D46D476FA903AACAC1B04D6 /* ELNAPSManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ELNAPSManager.m; sourceTree = "<group>"; };
+		49E62D77136E38AA7C067224D2935855 /* ELNAPSEventsHandlerChain.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ELNAPSEventsHandlerChain.h; sourceTree = "<group>"; };
 		4D151019FE518EEDB80C80386195499F /* libELNPushServices.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libELNPushServices.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F5C2F671AAC7F7252D4EB528ACDBE0C /* Pods-example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		5140CC7F59EB6FF30716D7E95E436202 /* ELNPushServices-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ELNPushServices-prefix.pch"; sourceTree = "<group>"; };
-		5C79FBD83895D17A97D4490165E10A38 /* ELNAPSNotificationHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ELNAPSNotificationHandler.h; sourceTree = "<group>"; };
+		5DA2F19B2D3DD5D0FB1FD931793CD6B8 /* ELNAPSEventsHandlerChain.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ELNAPSEventsHandlerChain.m; sourceTree = "<group>"; };
+		5DC1200C030557E1A41340342218D21C /* ELNAPSNotification.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ELNAPSNotification.h; sourceTree = "<group>"; };
 		5EA35A4C5392886E70621940FD4D091C /* Pods-exampleTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-exampleTests-frameworks.sh"; sourceTree = "<group>"; };
-		662DE38B1A4CDEA77A7A3AD60FA3E83B /* ELNAPSNotification.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ELNAPSNotification.m; sourceTree = "<group>"; };
+		5EC937F7421F768A279C00200AE8BD1B /* ELNPushServices-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ELNPushServices-dummy.m"; sourceTree = "<group>"; };
+		638605D07DDE7EAB2DEE37D465493F3F /* ELNAPSNotification.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ELNAPSNotification.m; sourceTree = "<group>"; };
 		6AC6D7E32FCCD56349D2719483F3487E /* Pods-exampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-exampleTests.release.xcconfig"; sourceTree = "<group>"; };
-		6CA9F3978A3735054BF95F9361D0EA30 /* ELNAPSNotificationAlert.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ELNAPSNotificationAlert.m; sourceTree = "<group>"; };
 		7C10F1ABD409D3ABCBC942CD6CBCFD2F /* Pods-exampleTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-exampleTests-dummy.m"; sourceTree = "<group>"; };
-		8E342CF52E3D8A73D013248C8A32BC74 /* ELNPushServices-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ELNPushServices-dummy.m"; sourceTree = "<group>"; };
+		9270D32D888923A2B402800D03FA8F12 /* ELNPushServices.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ELNPushServices.h; sourceTree = "<group>"; };
+		944F512CB82C1E56E7174D1F40C14F3A /* ELNPushServices-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ELNPushServices-prefix.pch"; sourceTree = "<group>"; };
+		9EAB0E065AC0ED5F1D681783C7E037A1 /* ELNAPSEventsHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ELNAPSEventsHandler.h; sourceTree = "<group>"; };
+		9F2FA76486F2A782E0279BC16E70C118 /* ELNAPSNotificationHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ELNAPSNotificationHandler.h; sourceTree = "<group>"; };
 		A698CA20C57533C375B7D9B717C18F59 /* Pods-exampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-exampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A70E55BE85943B69032741218EC0311F /* Pods-example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-example-acknowledgements.plist"; sourceTree = "<group>"; };
 		AE3E5E52C7398EB09FEFF85D59351665 /* Pods-exampleTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-exampleTests-resources.sh"; sourceTree = "<group>"; };
 		B2EBB9486A6CA32E95C0E258FF5F7184 /* Pods-exampleTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-exampleTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		BC79CCA5E67661E161D44141DD2FD292 /* Pods-example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-example-resources.sh"; sourceTree = "<group>"; };
-		C26AF6421C562967B968B46A4BB224AA /* ELNAPSNotification.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ELNAPSNotification.h; sourceTree = "<group>"; };
+		C61A24A4BF78FD8F83EFB910F0AD5AF8 /* ELNAPSNotificationAlert.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ELNAPSNotificationAlert.h; sourceTree = "<group>"; };
 		C885A4AEFD763F7E0EDC44C23D32EA1F /* Pods-example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-example-frameworks.sh"; sourceTree = "<group>"; };
-		DFA7A6EA7420A09AD865A1C5D2CA34B5 /* ELNPushServices.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ELNPushServices.h; sourceTree = "<group>"; };
-		E1CD42FF3BCE61DF95EB3EDED5F183D0 /* ELNAPSEventsHandlerChain.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ELNAPSEventsHandlerChain.h; sourceTree = "<group>"; };
+		DD19B676A3DE739104C43DEA54D40EFD /* ELNAPSManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = ELNAPSManager.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,19 +125,9 @@
 		64FA55BFF7CE9A728936B7B56374FDF7 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				692ACD5420C6B4B22D1CCC09F906E68A /* ELNPushServices */,
+				CCAFAB1326C4AF6E2DD79341E05F0CFB /* ELNPushServices */,
 			);
 			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		692ACD5420C6B4B22D1CCC09F906E68A /* ELNPushServices */ = {
-			isa = PBXGroup;
-			children = (
-				C97616C58F5E29F83A345AFBDA4F59B1 /* Source */,
-				B5A8FA22C5522170DA68133AB5D6AB7D /* Support Files */,
-			);
-			name = ELNPushServices;
-			path = ../..;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -166,6 +156,17 @@
 			path = "Target Support Files/Pods-exampleTests";
 			sourceTree = "<group>";
 		};
+		892BF4C8A9F0F11EB7B73D7DD22528C9 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				21C361F20C47D7A95B9CD69B01C73444 /* ELNPushServices.xcconfig */,
+				5EC937F7421F768A279C00200AE8BD1B /* ELNPushServices-dummy.m */,
+				944F512CB82C1E56E7174D1F40C14F3A /* ELNPushServices-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/ELNPushServices";
+			sourceTree = "<group>";
+		};
 		92E6FBE2FDBB5CF913ADC6653DC22489 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,17 +175,6 @@
 				10E3D02B1A0CE04F94E54CEBA74DF4B5 /* libPods-exampleTests.a */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		B5A8FA22C5522170DA68133AB5D6AB7D /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				1809DE3DC519B8DD6E51BFBACEA5EF6E /* ELNPushServices.xcconfig */,
-				8E342CF52E3D8A73D013248C8A32BC74 /* ELNPushServices-dummy.m */,
-				5140CC7F59EB6FF30716D7E95E436202 /* ELNPushServices-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "example/Pods/Target Support Files/ELNPushServices";
 			sourceTree = "<group>";
 		};
 		B8669502C2CF59B97521D485D8BFA78A /* Targets Support Files */ = {
@@ -212,22 +202,32 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		C97616C58F5E29F83A345AFBDA4F59B1 /* Source */ = {
+		C2B558546B1F73F62BEE0B9ECEFB0404 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				0030E395A7267C4235728BA466701645 /* ELNAPSEventsHandler.h */,
-				E1CD42FF3BCE61DF95EB3EDED5F183D0 /* ELNAPSEventsHandlerChain.h */,
-				0D7FD33A1498913AA72D6155047EAC75 /* ELNAPSEventsHandlerChain.m */,
-				487618545495DDE51A8383C7234DD1E6 /* ELNAPSManager.h */,
-				0B0989A85E74E363E2EA215C80D257DA /* ELNAPSManager.m */,
-				C26AF6421C562967B968B46A4BB224AA /* ELNAPSNotification.h */,
-				662DE38B1A4CDEA77A7A3AD60FA3E83B /* ELNAPSNotification.m */,
-				428E0FF23D4118B22311094237B49615 /* ELNAPSNotificationAlert.h */,
-				6CA9F3978A3735054BF95F9361D0EA30 /* ELNAPSNotificationAlert.m */,
-				5C79FBD83895D17A97D4490165E10A38 /* ELNAPSNotificationHandler.h */,
-				DFA7A6EA7420A09AD865A1C5D2CA34B5 /* ELNPushServices.h */,
+				9EAB0E065AC0ED5F1D681783C7E037A1 /* ELNAPSEventsHandler.h */,
+				49E62D77136E38AA7C067224D2935855 /* ELNAPSEventsHandlerChain.h */,
+				5DA2F19B2D3DD5D0FB1FD931793CD6B8 /* ELNAPSEventsHandlerChain.m */,
+				DD19B676A3DE739104C43DEA54D40EFD /* ELNAPSManager.h */,
+				47504C6A1D46D476FA903AACAC1B04D6 /* ELNAPSManager.m */,
+				5DC1200C030557E1A41340342218D21C /* ELNAPSNotification.h */,
+				638605D07DDE7EAB2DEE37D465493F3F /* ELNAPSNotification.m */,
+				C61A24A4BF78FD8F83EFB910F0AD5AF8 /* ELNAPSNotificationAlert.h */,
+				1D115726115C2F28E0E6C9D42FFE9FB3 /* ELNAPSNotificationAlert.m */,
+				9F2FA76486F2A782E0279BC16E70C118 /* ELNAPSNotificationHandler.h */,
+				9270D32D888923A2B402800D03FA8F12 /* ELNPushServices.h */,
 			);
 			path = Source;
+			sourceTree = "<group>";
+		};
+		CCAFAB1326C4AF6E2DD79341E05F0CFB /* ELNPushServices */ = {
+			isa = PBXGroup;
+			children = (
+				C2B558546B1F73F62BEE0B9ECEFB0404 /* Source */,
+				892BF4C8A9F0F11EB7B73D7DD22528C9 /* Support Files */,
+			);
+			name = ELNPushServices;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,7 +288,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 695B1A3D3D43166E008F3E9DAD5D9878 /* Build configuration list for PBXNativeTarget "ELNPushServices" */;
 			buildPhases = (
-				AF9587CA58678C72CB5943427896E279 /* Sources */,
+				96986C5DAE721C31D01EBBAA7BBFD161 /* Sources */,
 				D71AFFE0D9C67B7994137D5F85CF7E8B /* Frameworks */,
 				2002850D1C5F0179328CB8C0DC0EC0AE /* Headers */,
 			);
@@ -330,23 +330,23 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		96986C5DAE721C31D01EBBAA7BBFD161 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B3E638710853080AFE05B5975031B04 /* ELNAPSEventsHandlerChain.m in Sources */,
+				A64E6D48857BDCD5E0299B61BE1BB425 /* ELNAPSManager.m in Sources */,
+				ECDF548D1564E2F556C0C7F067CACB02 /* ELNAPSNotification.m in Sources */,
+				6B45ED01B5FF56A991B0010B576D4E96 /* ELNAPSNotificationAlert.m in Sources */,
+				A46792600FEFA312F6902E72DE55DC75 /* ELNPushServices-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9DAE20A31C48B83A096BA0E5C49AAE9E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				DD20C2CFDF7E6C10168C05AE0351D728 /* Pods-exampleTests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AF9587CA58678C72CB5943427896E279 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1EEB9EA6B6035EFF48C61AD1FD42FDA4 /* ELNAPSEventsHandlerChain.m in Sources */,
-				32F7A583DA46650BF752A6BF638A7807 /* ELNAPSManager.m in Sources */,
-				3137CBE87E53334DB55850D9F60E4952 /* ELNAPSNotification.m in Sources */,
-				C44EC9961CE09A98B67DEAF5EAF571D0 /* ELNAPSNotificationAlert.m in Sources */,
-				263C4E9176C0560CF532C574B71F700F /* ELNPushServices-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,7 +412,7 @@
 		};
 		889B1B6F131F2EEEEF379A37660B6F00 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1809DE3DC519B8DD6E51BFBACEA5EF6E /* ELNPushServices.xcconfig */;
+			baseConfigurationReference = 21C361F20C47D7A95B9CD69B01C73444 /* ELNPushServices.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/ELNPushServices/ELNPushServices-prefix.pch";
@@ -503,7 +503,7 @@
 		};
 		B289F98E978F2CE5E5E3C4F91793F957 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1809DE3DC519B8DD6E51BFBACEA5EF6E /* ELNPushServices.xcconfig */;
+			baseConfigurationReference = 21C361F20C47D7A95B9CD69B01C73444 /* ELNPushServices.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/ELNPushServices/ELNPushServices-prefix.pch";

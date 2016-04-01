@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '0A6B7D2EB43E52DD0D54D2C9'
+               BlueprintIdentifier = 'ADF2F4E01706CFAEE7B4D8D7'
                BlueprintName = 'ELNPushServices'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libELNPushServices.a'>

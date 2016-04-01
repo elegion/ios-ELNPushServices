@@ -1,5 +1,5 @@
 PODS:
-  - ELNPushServices (0.3.0)
+  - ELNPushServices (0.3.2)
 
 DEPENDENCIES:
   - ELNPushServices (from `../`)
@@ -9,6 +9,6 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  ELNPushServices: d0a4989f6924251c41fc02c4f0fc3067e7519605
+  ELNPushServices: b58fffdb3de31aed27d175db179259078345dd99
 
 COCOAPODS: 0.39.0
