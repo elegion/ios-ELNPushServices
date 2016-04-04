@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:example.xcodeproj">
+      location = "self:/Users/chebur/Documents/Projects/Develop/ELNAPS/ELNPushServices.xcodeproj">
    </FileRef>
 </Workspace>

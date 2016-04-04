@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0700"
+   LastUpgradeVersion = "0730"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6C60805C52BEEE8197FA19BA518997E8"
-               BuildableName = "libELNPushServices.a"
+               BlueprintIdentifier = "111D9ECE1C85C2B100CF71B4"
+               BuildableName = "ELNPushServices.framework"
                BlueprintName = "ELNPushServices"
-               ReferencedContainer = "container:Pods.xcodeproj">
+               ReferencedContainer = "container:ELNPushServices.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,20 +32,20 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "37801E641CAE79AD008F13D7"
-               BuildableName = "exampleTests.xctest"
-               BlueprintName = "exampleTests"
-               ReferencedContainer = "container:../example.xcodeproj">
+               BlueprintIdentifier = "111D9ED81C85C2B100CF71B4"
+               BuildableName = "ELNPushServices.xctest"
+               BlueprintName = "UnitTests"
+               ReferencedContainer = "container:ELNPushServices.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6C60805C52BEEE8197FA19BA518997E8"
-            BuildableName = "libELNPushServices.a"
+            BlueprintIdentifier = "111D9ECE1C85C2B100CF71B4"
+            BuildableName = "ELNPushServices.framework"
             BlueprintName = "ELNPushServices"
-            ReferencedContainer = "container:Pods.xcodeproj">
+            ReferencedContainer = "container:ELNPushServices.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -64,10 +64,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6C60805C52BEEE8197FA19BA518997E8"
-            BuildableName = "libELNPushServices.a"
+            BlueprintIdentifier = "111D9ECE1C85C2B100CF71B4"
+            BuildableName = "ELNPushServices.framework"
             BlueprintName = "ELNPushServices"
-            ReferencedContainer = "container:Pods.xcodeproj">
+            ReferencedContainer = "container:ELNPushServices.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -82,15 +82,15 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "6C60805C52BEEE8197FA19BA518997E8"
-            BuildableName = "libELNPushServices.a"
+            BlueprintIdentifier = "111D9ECE1C85C2B100CF71B4"
+            BuildableName = "ELNPushServices.framework"
             BlueprintName = "ELNPushServices"
-            ReferencedContainer = "container:Pods.xcodeproj">
+            ReferencedContainer = "container:ELNPushServices.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
-      buildConfiguration = "Debug">
+      buildConfiguration = "Release">
    </AnalyzeAction>
    <ArchiveAction
       buildConfiguration = "Release"
