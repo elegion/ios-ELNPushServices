@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		111D9EDA1C85C2B100CF71B4 /* ELNPushServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 111D9ECF1C85C2B100CF71B4 /* ELNPushServices.framework */; };
 		111D9EEE1C85C3FF00CF71B4 /* ELNPushServices.h in Headers */ = {isa = PBXBuildFile; fileRef = 111D9EEC1C85C3FF00CF71B4 /* ELNPushServices.h */; };
-		111D9EF11C85C48D00CF71B4 /* Default.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 111D9EF01C85C48D00CF71B4 /* Default.xcconfig */; };
 		111D9EFC1C85C4E700CF71B4 /* ELNAPSManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 111D9EF41C85C4E700CF71B4 /* ELNAPSManager.h */; };
 		111D9EFD1C85C4E700CF71B4 /* ELNAPSNotificationHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 111D9EF51C85C4E700CF71B4 /* ELNAPSNotificationHandler.h */; };
 		111D9EFF1C85C4E700CF71B4 /* ELNAPSNotification.h in Headers */ = {isa = PBXBuildFile; fileRef = 111D9EF71C85C4E700CF71B4 /* ELNAPSNotification.h */; };
@@ -40,8 +39,6 @@
 		111D9ECF1C85C2B100CF71B4 /* ELNPushServices.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ELNPushServices.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		111D9ED91C85C2B100CF71B4 /* ELNPushServices.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ELNPushServices.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		111D9EEC1C85C3FF00CF71B4 /* ELNPushServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELNPushServices.h; sourceTree = "<group>"; };
-		111D9EED1C85C3FF00CF71B4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		111D9EF01C85C48D00CF71B4 /* Default.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Default.xcconfig; sourceTree = "<group>"; };
 		111D9EF41C85C4E700CF71B4 /* ELNAPSManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELNAPSManager.h; sourceTree = "<group>"; };
 		111D9EF51C85C4E700CF71B4 /* ELNAPSNotificationHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELNAPSNotificationHandler.h; sourceTree = "<group>"; };
 		111D9EF71C85C4E700CF71B4 /* ELNAPSNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELNAPSNotification.h; sourceTree = "<group>"; };
@@ -58,6 +55,8 @@
 		11F03F031CA3FC1C002209A5 /* ELNNotificationTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ELNNotificationTest.swift; sourceTree = "<group>"; };
 		11F03F051CA3FE0D002209A5 /* Tests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Bridging-Header.h"; sourceTree = "<group>"; };
 		11F03F061CA40088002209A5 /* ELNAPSEventsHandlerChainTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ELNAPSEventsHandlerChainTest.swift; sourceTree = "<group>"; };
+		11FF9A1E1CCA3AA400FCB998 /* Default.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Default.xcconfig; path = Framework/Default.xcconfig; sourceTree = SOURCE_ROOT; };
+		11FF9A1F1CCA3AA400FCB998 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Framework/Info.plist; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,9 +108,8 @@
 		111D9EF21C85C49500CF71B4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				111D9EF01C85C48D00CF71B4 /* Default.xcconfig */,
-				111D9EEC1C85C3FF00CF71B4 /* ELNPushServices.h */,
-				111D9EED1C85C3FF00CF71B4 /* Info.plist */,
+				11FF9A1E1CCA3AA400FCB998 /* Default.xcconfig */,
+				11FF9A1F1CCA3AA400FCB998 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -129,6 +127,7 @@
 				111D9EF91C85C4E700CF71B4 /* ELNAPSNotificationAlert.h */,
 				111D9EFB1C85C4E700CF71B4 /* ELNAPSNotificationAlert.m */,
 				111D9EF51C85C4E700CF71B4 /* ELNAPSNotificationHandler.h */,
+				111D9EEC1C85C3FF00CF71B4 /* ELNPushServices.h */,
 			);
 			name = Core;
 			sourceTree = "<group>";
@@ -141,7 +140,8 @@
 				111D9F0D1C85D5DB00CF71B4 /* Resources */,
 				111D9F121C85D5EF00CF71B4 /* Supporting Files */,
 			);
-			path = Tests;
+			name = Tests;
+			path = Framework/Tests;
 			sourceTree = "<group>";
 		};
 		111D9F0D1C85D5DB00CF71B4 /* Resources */ = {
@@ -259,7 +259,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				111D9EF11C85C48D00CF71B4 /* Default.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,7 +307,7 @@
 /* Begin XCBuildConfiguration section */
 		111D9EE11C85C2B100CF71B4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 111D9EF01C85C48D00CF71B4 /* Default.xcconfig */;
+			baseConfigurationReference = 11FF9A1E1CCA3AA400FCB998 /* Default.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -357,7 +356,7 @@
 		};
 		111D9EE21C85C2B100CF71B4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 111D9EF01C85C48D00CF71B4 /* Default.xcconfig */;
+			baseConfigurationReference = 11FF9A1E1CCA3AA400FCB998 /* Default.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -405,7 +404,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Source/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Framework/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.e-legion.ELNPushServices";
@@ -421,7 +420,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Source/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Framework/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.e-legion.ELNPushServices";
@@ -434,11 +433,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				INFOPLIST_FILE = Tests/Info.plist;
+				INFOPLIST_FILE = Framework/Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.e-legion.ELNPushServices";
 				PRODUCT_NAME = ELNPushServices;
-				SWIFT_OBJC_BRIDGING_HEADER = "Tests/Tests-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Framework/Tests/Tests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -447,11 +446,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				INFOPLIST_FILE = Tests/Info.plist;
+				INFOPLIST_FILE = Framework/Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.e-legion.ELNPushServices";
 				PRODUCT_NAME = ELNPushServices;
-				SWIFT_OBJC_BRIDGING_HEADER = "Tests/Tests-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Framework/Tests/Tests-Bridging-Header.h";
 			};
 			name = Release;
 		};
