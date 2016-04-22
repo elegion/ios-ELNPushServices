@@ -18,6 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 /// @note Listens for `UIApplicationDidFinishLaunchingNotification` to handle remote notifications as a result of application launch.
 @interface ELNAPSEventsHandlerChain : NSObject <ELNAPSEventsHandler>
 
+@property (nonatomic, copy, readonly) NSData *deviceToken;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -10,6 +10,7 @@
 
 @interface ELNAPSEventsHandlerChain ()
 
+@property (nonatomic, copy) NSData *deviceToken;
 @property (nonatomic, strong) NSMutableArray<id<ELNAPSNotificationHandler>> *notificationHandlers;
 @property (nonatomic, assign) BOOL observeApplicationDidFinishLaunchingNotification;
 
@@ -90,7 +91,7 @@
 #pragma mark - Delegate Callbacks
 
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
-    // do nothing
+    self.deviceToken = deviceToken;
 }
 
 - (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
