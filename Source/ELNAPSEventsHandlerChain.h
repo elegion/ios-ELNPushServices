@@ -11,6 +11,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+/// Registers events handlers chain.
+///
+/// It passes a remote notification to the first <ELNAPSNotificationHandler> object that returns YES to `shouldHandleNotification:forApplication:` message.
+///
+/// @note Listens for `UIApplicationDidFinishLaunchingNotification` to handle remote notifications as a result of application launch.
 @interface ELNAPSEventsHandlerChain : NSObject <ELNAPSEventsHandler>
 
 @end

@@ -25,8 +25,13 @@ class TestHandler : NSObject, ELNAPSNotificationHandler {
 
 class ELNAPSEventsHandlerChainTest: XCTestCase {
 
+    var eventsHandler: ELNAPSEventsHandler!
+    
+    override func setUp() {
+        eventsHandler = ELNAPSEventsHandlerChain()
+    }
+    
     func testChainEventsHandlerShouldHandleNotificationUntilAppropriateHandlerFound() {
-        let eventsHandler = ELNAPSEventsHandlerChain()
         let notificationHandler1 = TestHandler()
         let notificationHandler2 = TestHandler()
         eventsHandler.addNotificationHandler(notificationHandler1)
@@ -37,5 +42,16 @@ class ELNAPSEventsHandlerChainTest: XCTestCase {
         XCTAssertTrue(notificationHandler1.handled)
         XCTAssertFalse(notificationHandler2.handled)
     }
-
+    
+    func testChainEventsHandlerShouldHandleApplicationDidFinishLaunchingNotification() {
+        let notificationHandler = TestHandler()
+        eventsHandler.addNotificationHandler(notificationHandler)
+        
+        let application = UIApplication.sharedApplication()
+        let userInfo = [UIApplicationLaunchOptionsRemoteNotificationKey: ["alert": ["title": "title"]]]
+        let notification = NSNotification(name: UIApplicationDidFinishLaunchingNotification, object: application, userInfo: userInfo)
+        NSNotificationCenter.defaultCenter().postNotification(notification)
+        
+        XCTAssertTrue(notificationHandler.handled)
+    }
 }
