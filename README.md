@@ -41,9 +41,14 @@ ELNAPSManager *manager = [ELNAPSManager new];
 
 Обработкой событий занимается объект, который реализует протокол `ELNAPSEventsHandler`.
 
-Библиотека предоставляет стандартный объект `ELNAPSEventsHandlerChain`, который позволяет зарегистрировать цепочку обработчиков.
+Обработчики должны быть зарегистрированы заранее:
 
-Необходимо проксировать вызовы UIAppDelegate в обработчик событий:
+```objective-c
+ELNAPSManager *manager = [ELNAPSManager new];
+[manager.eventsHandler addNotificationHandler:handler];
+```
+
+При получении нотификаций, необходимо проксировать вызовы UIAppDelegate в обработчик событий:
 
 ```objective-c
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
@@ -51,14 +56,15 @@ ELNAPSManager *manager = [ELNAPSManager new];
 }
 ```
 
-После получения уведомления  `ELNAPSEventsHandlerChain` пытается обработать его. Для этого он ищет обработчик, который должен быть зарегистрирован заранее:
+### ELNAPSEventsHandlerChain
 
-```objective-c
-id<ELNAPSNotificationHandler> handler = [MyCustomNotificationHandler new];
-[manager.eventsHandler addNotificationHandler:handler];
-```
+Библиотека предоставляет стандартный объект `ELNAPSEventsHandlerChain`, который позволяет зарегистрировать цепочку обработчиков.
 
-### Handlers
+После получения уведомления  `ELNAPSEventsHandlerChain` пытается найти обработчик `<ELNAPSNotificationHandler>`, который сможет его обработать. Первый обработчик, который возвращает `YES` в методе `shouldHandleNotification:forApplication:` , получает возможность обработать уведомления, после чего поиск обработчика завершается.
+
+Объект `ELNAPSEventsHandlerChain` подписывается на нотификации `UIApplicationDidFinishLaunchingNotification`, чтобы обработать пуши, которые пришли во время старта приложения.
+
+### ELNAPSNotificationHandler
 
 Обработчики, должны соответствовать протоколу `ELNAPSNotificationHandler`:
 
@@ -72,8 +78,6 @@ id<ELNAPSNotificationHandler> handler = [MyCustomNotificationHandler new];
 
 @end
 ```
-
-Первый обработчик, который возвращает `YES` в методе `shouldHandleNotification:forApplication:` , получает возможность обработать уведомления, после чего поиск обработчика завершается.
 
 Для обработки уведомления используется метод `handleNotification:forApplication:`:
 
