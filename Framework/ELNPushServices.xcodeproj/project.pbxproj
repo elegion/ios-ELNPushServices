@@ -8,21 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		111D9EDA1C85C2B100CF71B4 /* ELNPushServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 111D9ECF1C85C2B100CF71B4 /* ELNPushServices.framework */; };
-		111D9EEE1C85C3FF00CF71B4 /* ELNPushServices.h in Headers */ = {isa = PBXBuildFile; fileRef = 111D9EEC1C85C3FF00CF71B4 /* ELNPushServices.h */; };
-		111D9EFC1C85C4E700CF71B4 /* ELNAPSManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 111D9EF41C85C4E700CF71B4 /* ELNAPSManager.h */; };
-		111D9EFD1C85C4E700CF71B4 /* ELNAPSNotificationHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 111D9EF51C85C4E700CF71B4 /* ELNAPSNotificationHandler.h */; };
-		111D9EFF1C85C4E700CF71B4 /* ELNAPSNotification.h in Headers */ = {isa = PBXBuildFile; fileRef = 111D9EF71C85C4E700CF71B4 /* ELNAPSNotification.h */; };
-		111D9F001C85C4E700CF71B4 /* ELNAPSNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 111D9EF81C85C4E700CF71B4 /* ELNAPSNotification.m */; };
-		111D9F011C85C4E700CF71B4 /* ELNAPSNotificationAlert.h in Headers */ = {isa = PBXBuildFile; fileRef = 111D9EF91C85C4E700CF71B4 /* ELNAPSNotificationAlert.h */; };
-		111D9F021C85C4E700CF71B4 /* ELNAPSManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 111D9EFA1C85C4E700CF71B4 /* ELNAPSManager.m */; };
-		111D9F031C85C4E700CF71B4 /* ELNAPSNotificationAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 111D9EFB1C85C4E700CF71B4 /* ELNAPSNotificationAlert.m */; };
 		111D9F101C85D5E000CF71B4 /* AlertWithStringAsTitle.json in Resources */ = {isa = PBXBuildFile; fileRef = 111D9F0E1C85D5DB00CF71B4 /* AlertWithStringAsTitle.json */; };
 		111D9F171C85D8F100CF71B4 /* AlertWithBadgeAndLocalizedActionKey.json in Resources */ = {isa = PBXBuildFile; fileRef = 111D9F151C85D89900CF71B4 /* AlertWithBadgeAndLocalizedActionKey.json */; };
-		111ED4091CA3F6A500ED320A /* ELNAPSEventsHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 111ED4071CA3F6A500ED320A /* ELNAPSEventsHandler.h */; };
-		111ED40D1CA3F75200ED320A /* ELNAPSEventsHandlerChain.h in Headers */ = {isa = PBXBuildFile; fileRef = 111ED40B1CA3F75200ED320A /* ELNAPSEventsHandlerChain.h */; };
-		111ED40E1CA3F75200ED320A /* ELNAPSEventsHandlerChain.m in Sources */ = {isa = PBXBuildFile; fileRef = 111ED40C1CA3F75200ED320A /* ELNAPSEventsHandlerChain.m */; };
 		11F03F041CA3FC1C002209A5 /* ELNNotificationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F03F031CA3FC1C002209A5 /* ELNNotificationTest.swift */; };
 		11F03F071CA40088002209A5 /* ELNAPSEventsHandlerChainTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F03F061CA40088002209A5 /* ELNAPSEventsHandlerChainTest.swift */; };
+		FE82658B1CD1509C00D1CDDC /* ELNAPSEventsHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = FE8265801CD1509C00D1CDDC /* ELNAPSEventsHandler.h */; };
+		FE82658C1CD1509C00D1CDDC /* ELNAPSEventsHandlerChain.h in Headers */ = {isa = PBXBuildFile; fileRef = FE8265811CD1509C00D1CDDC /* ELNAPSEventsHandlerChain.h */; };
+		FE82658D1CD1509C00D1CDDC /* ELNAPSEventsHandlerChain.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8265821CD1509C00D1CDDC /* ELNAPSEventsHandlerChain.m */; };
+		FE82658E1CD1509C00D1CDDC /* ELNAPSManager.h in Headers */ = {isa = PBXBuildFile; fileRef = FE8265831CD1509C00D1CDDC /* ELNAPSManager.h */; };
+		FE82658F1CD1509C00D1CDDC /* ELNAPSManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8265841CD1509C00D1CDDC /* ELNAPSManager.m */; };
+		FE8265901CD1509C00D1CDDC /* ELNAPSNotification.h in Headers */ = {isa = PBXBuildFile; fileRef = FE8265851CD1509C00D1CDDC /* ELNAPSNotification.h */; };
+		FE8265911CD1509C00D1CDDC /* ELNAPSNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8265861CD1509C00D1CDDC /* ELNAPSNotification.m */; };
+		FE8265921CD1509C00D1CDDC /* ELNAPSNotificationAlert.h in Headers */ = {isa = PBXBuildFile; fileRef = FE8265871CD1509C00D1CDDC /* ELNAPSNotificationAlert.h */; };
+		FE8265931CD1509C00D1CDDC /* ELNAPSNotificationAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = FE8265881CD1509C00D1CDDC /* ELNAPSNotificationAlert.m */; };
+		FE8265941CD1509C00D1CDDC /* ELNAPSNotificationHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = FE8265891CD1509C00D1CDDC /* ELNAPSNotificationHandler.h */; };
+		FE8265951CD1509C00D1CDDC /* ELNPushServices.h in Headers */ = {isa = PBXBuildFile; fileRef = FE82658A1CD1509C00D1CDDC /* ELNPushServices.h */; };
+		FE8265991CD1521D00D1CDDC /* Tests-Bridging-Header.h in Headers */ = {isa = PBXBuildFile; fileRef = FE8265971CD1521D00D1CDDC /* Tests-Bridging-Header.h */; };
+		FE82659A1CD1528300D1CDDC /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FE8265961CD1521D00D1CDDC /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,25 +40,25 @@
 /* Begin PBXFileReference section */
 		111D9ECF1C85C2B100CF71B4 /* ELNPushServices.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ELNPushServices.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		111D9ED91C85C2B100CF71B4 /* ELNPushServices.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ELNPushServices.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		111D9EEC1C85C3FF00CF71B4 /* ELNPushServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELNPushServices.h; sourceTree = "<group>"; };
-		111D9EF41C85C4E700CF71B4 /* ELNAPSManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELNAPSManager.h; sourceTree = "<group>"; };
-		111D9EF51C85C4E700CF71B4 /* ELNAPSNotificationHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELNAPSNotificationHandler.h; sourceTree = "<group>"; };
-		111D9EF71C85C4E700CF71B4 /* ELNAPSNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELNAPSNotification.h; sourceTree = "<group>"; };
-		111D9EF81C85C4E700CF71B4 /* ELNAPSNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELNAPSNotification.m; sourceTree = "<group>"; };
-		111D9EF91C85C4E700CF71B4 /* ELNAPSNotificationAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELNAPSNotificationAlert.h; sourceTree = "<group>"; };
-		111D9EFA1C85C4E700CF71B4 /* ELNAPSManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELNAPSManager.m; sourceTree = "<group>"; };
-		111D9EFB1C85C4E700CF71B4 /* ELNAPSNotificationAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELNAPSNotificationAlert.m; sourceTree = "<group>"; };
-		111D9F061C85CCAE00CF71B4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		111D9F0E1C85D5DB00CF71B4 /* AlertWithStringAsTitle.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AlertWithStringAsTitle.json; sourceTree = "<group>"; };
 		111D9F151C85D89900CF71B4 /* AlertWithBadgeAndLocalizedActionKey.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AlertWithBadgeAndLocalizedActionKey.json; sourceTree = "<group>"; };
-		111ED4071CA3F6A500ED320A /* ELNAPSEventsHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELNAPSEventsHandler.h; sourceTree = "<group>"; };
-		111ED40B1CA3F75200ED320A /* ELNAPSEventsHandlerChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELNAPSEventsHandlerChain.h; sourceTree = "<group>"; };
-		111ED40C1CA3F75200ED320A /* ELNAPSEventsHandlerChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELNAPSEventsHandlerChain.m; sourceTree = "<group>"; };
 		11F03F031CA3FC1C002209A5 /* ELNNotificationTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ELNNotificationTest.swift; sourceTree = "<group>"; };
-		11F03F051CA3FE0D002209A5 /* Tests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Bridging-Header.h"; sourceTree = "<group>"; };
 		11F03F061CA40088002209A5 /* ELNAPSEventsHandlerChainTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ELNAPSEventsHandlerChainTest.swift; sourceTree = "<group>"; };
-		11FF9A1E1CCA3AA400FCB998 /* Default.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Default.xcconfig; path = Framework/Default.xcconfig; sourceTree = SOURCE_ROOT; };
-		11FF9A1F1CCA3AA400FCB998 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Framework/Info.plist; sourceTree = SOURCE_ROOT; };
+		11FF9A1E1CCA3AA400FCB998 /* Default.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Default.xcconfig; sourceTree = SOURCE_ROOT; };
+		11FF9A1F1CCA3AA400FCB998 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
+		FE8265801CD1509C00D1CDDC /* ELNAPSEventsHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELNAPSEventsHandler.h; sourceTree = "<group>"; };
+		FE8265811CD1509C00D1CDDC /* ELNAPSEventsHandlerChain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELNAPSEventsHandlerChain.h; sourceTree = "<group>"; };
+		FE8265821CD1509C00D1CDDC /* ELNAPSEventsHandlerChain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELNAPSEventsHandlerChain.m; sourceTree = "<group>"; };
+		FE8265831CD1509C00D1CDDC /* ELNAPSManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELNAPSManager.h; sourceTree = "<group>"; };
+		FE8265841CD1509C00D1CDDC /* ELNAPSManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELNAPSManager.m; sourceTree = "<group>"; };
+		FE8265851CD1509C00D1CDDC /* ELNAPSNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELNAPSNotification.h; sourceTree = "<group>"; };
+		FE8265861CD1509C00D1CDDC /* ELNAPSNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELNAPSNotification.m; sourceTree = "<group>"; };
+		FE8265871CD1509C00D1CDDC /* ELNAPSNotificationAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELNAPSNotificationAlert.h; sourceTree = "<group>"; };
+		FE8265881CD1509C00D1CDDC /* ELNAPSNotificationAlert.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ELNAPSNotificationAlert.m; sourceTree = "<group>"; };
+		FE8265891CD1509C00D1CDDC /* ELNAPSNotificationHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELNAPSNotificationHandler.h; sourceTree = "<group>"; };
+		FE82658A1CD1509C00D1CDDC /* ELNPushServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ELNPushServices.h; sourceTree = "<group>"; };
+		FE8265961CD1521D00D1CDDC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE8265971CD1521D00D1CDDC /* Tests-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Tests-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +101,21 @@
 		111D9EEB1C85C3FF00CF71B4 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				111D9EF31C85C4DF00CF71B4 /* Core */,
+				FE8265801CD1509C00D1CDDC /* ELNAPSEventsHandler.h */,
+				FE8265811CD1509C00D1CDDC /* ELNAPSEventsHandlerChain.h */,
+				FE8265821CD1509C00D1CDDC /* ELNAPSEventsHandlerChain.m */,
+				FE8265831CD1509C00D1CDDC /* ELNAPSManager.h */,
+				FE8265841CD1509C00D1CDDC /* ELNAPSManager.m */,
+				FE8265851CD1509C00D1CDDC /* ELNAPSNotification.h */,
+				FE8265861CD1509C00D1CDDC /* ELNAPSNotification.m */,
+				FE8265871CD1509C00D1CDDC /* ELNAPSNotificationAlert.h */,
+				FE8265881CD1509C00D1CDDC /* ELNAPSNotificationAlert.m */,
+				FE8265891CD1509C00D1CDDC /* ELNAPSNotificationHandler.h */,
+				FE82658A1CD1509C00D1CDDC /* ELNPushServices.h */,
 				111D9EF21C85C49500CF71B4 /* Supporting Files */,
 			);
-			path = Source;
+			name = Source;
+			path = ../Source;
 			sourceTree = "<group>";
 		};
 		111D9EF21C85C49500CF71B4 /* Supporting Files */ = {
@@ -112,24 +125,7 @@
 				11FF9A1F1CCA3AA400FCB998 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		111D9EF31C85C4DF00CF71B4 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				111ED4071CA3F6A500ED320A /* ELNAPSEventsHandler.h */,
-				111ED40B1CA3F75200ED320A /* ELNAPSEventsHandlerChain.h */,
-				111ED40C1CA3F75200ED320A /* ELNAPSEventsHandlerChain.m */,
-				111D9EF41C85C4E700CF71B4 /* ELNAPSManager.h */,
-				111D9EFA1C85C4E700CF71B4 /* ELNAPSManager.m */,
-				111D9EF71C85C4E700CF71B4 /* ELNAPSNotification.h */,
-				111D9EF81C85C4E700CF71B4 /* ELNAPSNotification.m */,
-				111D9EF91C85C4E700CF71B4 /* ELNAPSNotificationAlert.h */,
-				111D9EFB1C85C4E700CF71B4 /* ELNAPSNotificationAlert.m */,
-				111D9EF51C85C4E700CF71B4 /* ELNAPSNotificationHandler.h */,
-				111D9EEC1C85C3FF00CF71B4 /* ELNPushServices.h */,
-			);
-			name = Core;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		111D9F041C85CCAE00CF71B4 /* Tests */ = {
@@ -140,8 +136,7 @@
 				111D9F0D1C85D5DB00CF71B4 /* Resources */,
 				111D9F121C85D5EF00CF71B4 /* Supporting Files */,
 			);
-			name = Tests;
-			path = Framework/Tests;
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		111D9F0D1C85D5DB00CF71B4 /* Resources */ = {
@@ -156,8 +151,8 @@
 		111D9F121C85D5EF00CF71B4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				11F03F051CA3FE0D002209A5 /* Tests-Bridging-Header.h */,
-				111D9F061C85CCAE00CF71B4 /* Info.plist */,
+				FE8265961CD1521D00D1CDDC /* Info.plist */,
+				FE8265971CD1521D00D1CDDC /* Tests-Bridging-Header.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -169,13 +164,14 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				111D9EEE1C85C3FF00CF71B4 /* ELNPushServices.h in Headers */,
-				111D9EFC1C85C4E700CF71B4 /* ELNAPSManager.h in Headers */,
-				111ED40D1CA3F75200ED320A /* ELNAPSEventsHandlerChain.h in Headers */,
-				111D9EFF1C85C4E700CF71B4 /* ELNAPSNotification.h in Headers */,
-				111ED4091CA3F6A500ED320A /* ELNAPSEventsHandler.h in Headers */,
-				111D9F011C85C4E700CF71B4 /* ELNAPSNotificationAlert.h in Headers */,
-				111D9EFD1C85C4E700CF71B4 /* ELNAPSNotificationHandler.h in Headers */,
+				FE8265901CD1509C00D1CDDC /* ELNAPSNotification.h in Headers */,
+				FE8265991CD1521D00D1CDDC /* Tests-Bridging-Header.h in Headers */,
+				FE8265951CD1509C00D1CDDC /* ELNPushServices.h in Headers */,
+				FE82658E1CD1509C00D1CDDC /* ELNAPSManager.h in Headers */,
+				FE82658B1CD1509C00D1CDDC /* ELNAPSEventsHandler.h in Headers */,
+				FE8265921CD1509C00D1CDDC /* ELNAPSNotificationAlert.h in Headers */,
+				FE82658C1CD1509C00D1CDDC /* ELNAPSEventsHandlerChain.h in Headers */,
+				FE8265941CD1509C00D1CDDC /* ELNAPSNotificationHandler.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +255,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE82659A1CD1528300D1CDDC /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,10 +275,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				111D9F031C85C4E700CF71B4 /* ELNAPSNotificationAlert.m in Sources */,
-				111D9F021C85C4E700CF71B4 /* ELNAPSManager.m in Sources */,
-				111ED40E1CA3F75200ED320A /* ELNAPSEventsHandlerChain.m in Sources */,
-				111D9F001C85C4E700CF71B4 /* ELNAPSNotification.m in Sources */,
+				FE82658F1CD1509C00D1CDDC /* ELNAPSManager.m in Sources */,
+				FE82658D1CD1509C00D1CDDC /* ELNAPSEventsHandlerChain.m in Sources */,
+				FE8265931CD1509C00D1CDDC /* ELNAPSNotificationAlert.m in Sources */,
+				FE8265911CD1509C00D1CDDC /* ELNAPSNotification.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,7 +401,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/Framework/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.e-legion.ELNPushServices";
@@ -420,7 +417,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/Framework/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.e-legion.ELNPushServices";
@@ -433,11 +430,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				INFOPLIST_FILE = Framework/Tests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.e-legion.ELNPushServices";
 				PRODUCT_NAME = ELNPushServices;
-				SWIFT_OBJC_BRIDGING_HEADER = "Framework/Tests/Tests-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Tests/Tests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -446,11 +443,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				INFOPLIST_FILE = Framework/Tests/Info.plist;
+				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.e-legion.ELNPushServices";
 				PRODUCT_NAME = ELNPushServices;
-				SWIFT_OBJC_BRIDGING_HEADER = "Framework/Tests/Tests-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Tests/Tests-Bridging-Header.h";
 			};
 			name = Release;
 		};
