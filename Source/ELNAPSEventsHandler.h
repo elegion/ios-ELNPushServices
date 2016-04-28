@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "ELNAPSNotificationHandler.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @protocol ELNAPSEventsHandler <NSObject>
 
 /// Should be called from AppDelegate's `application:didReceiveRemoteNotification:` method.
@@ -26,3 +28,5 @@
 - (void)removeNotificationHandler:(id<ELNAPSNotificationHandler>)handler;
 
 @end
+
+NS_ASSUME_NONNULL_END
